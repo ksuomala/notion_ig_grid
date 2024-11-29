@@ -1,0 +1,35 @@
+import React from 'react';
+
+const InstagramGrid = () => {
+  // Placeholder image URLs (replace with your own)
+  const images = [
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300',
+    '/api/placeholder/300/300'
+  ];
+
+  return (
+    <div className="grid grid-cols-3 gap-1 p-1">
+      {images.map((src, index) => (
+        <div 
+          key={index} 
+          className="aspect-square overflow-hidden hover:opacity-75 transition-opacity duration-300"
+        >
+          <img 
+            src={src} 
+            alt={`Grid image ${index + 1}`} 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default InstagramGrid;
